@@ -1,0 +1,16 @@
+{
+  "manifest_sha256": "dc3705cdf16f38f45b871f08482ecf825cee74b34b375b1300a7bc6cc9a085fd",
+  "project_root": "/workspace/scratch/620e64c76255/TerraRover-Gen-publication-candidate",
+  "python": "3.12.13",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "scipy": "1.17.0",
+  "outputs_sha256": {
+    "paper_results_primary.csv": "e5dc8e0ed18c89eb1d452d7f447562997ec9a5cfe6aaecf640f46f8877d6064b",
+    "paper_results_failure_modes.csv": "cdcfef1d38286b7e81034f5e8078f160d3cddc2cf7df95b646af55bc0059a7e7",
+    "paper_results_continuous.csv": "3bfaa32f8f1cdd59b814640524782cd22824bc32352b41733448703fe2ae9307",
+    "paper_results_secondary.csv": "2c81d9db74dd383363348a7827fb3308d6543d0ca46359abe776c5cae6ac74c0",
+    "paper_results_complete_sensitivity.csv": "8d66431d73b5b212b3c119fbef5c9801bb65171c27da74d57f230821dc6e5f02",
+    "episode_seed_mapping.csv": "304e75d1c5b19ec4acbdd4c7436403f7ace4320bceeda1824c725dfe0cb70250"
+  }
+}

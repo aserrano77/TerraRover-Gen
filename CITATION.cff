@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this reproducibility package, please cite the associated TerraRover-Gen article."
+title: "TerraRover-Gen: reproducibility package for zero-shot terrain-family generalization of rover navigation"
+version: "1.0.0-paper"
+type: software
+authors:
+  - given-names: Carolina
+    family-names: Parreño-Rodríguez
+  - given-names: Antonio
+    family-names: Serrano-Fernández
+    email: aserrano7@ucam.edu
+    affiliation: "Universidad Católica San Antonio de Murcia (UCAM)"
+keywords:
+  - reinforcement learning
+  - rover navigation
+  - zero-shot generalization
+  - Unity ML-Agents
+  - reproducibility

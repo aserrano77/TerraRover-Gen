@@ -1,0 +1,3 @@
+analysis,n_pairs,excluded_pairs,rl_success_n,rl_success_pct,heuristic_success_n,heuristic_success_pct,diff_rl_minus_heuristic_pp,mcnemar_exact_p
+raw_primary,100,0,19,19.0,49,49.0,-30.0,2.2721360437572002e-07
+historical_filtered_sensitivity,63,37,18,28.57142857142857,48,76.19047619047619,-47.61904761904761,6.938353180885315e-08

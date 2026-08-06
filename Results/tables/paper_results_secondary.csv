@@ -1,0 +1,11 @@
+family,comparison,system,terrain,variant,n_pairs,baseline_success_n,baseline_success_pct,variant_success_n,variant_success_pct,diff_variant_minus_baseline_pp,mcnemar_exact_p,both_success_n,baseline_only_success_n,variant_only_success_n,both_failure_n,mcnemar_holm_p_within_family,mcnemar_holm_reject_0_05
+physical_robustness_8,RL V3_F3_02: baseline vs sticky,RL,V3_F3_02,high-friction material configuration,100,87,87.0,98,98.0,11.0,0.0009765625,87,0,11,2,0.0078125,True
+physical_robustness_8,RL V3_F3_02: baseline vs fl2000,RL,V3_F3_02,force-limit 2000,100,87,87.0,93,93.0,6.0,0.1795654296875,83,4,10,3,1.0,False
+physical_robustness_8,RL BumpyGround: baseline vs sticky,RL,BumpyGround,high-friction material configuration,100,31,31.0,17,17.0,-14.0,0.004343509674072266,13,18,4,65,0.03040456771850586,True
+physical_robustness_8,RL BumpyGround: baseline vs fl2000,RL,BumpyGround,force-limit 2000,100,31,31.0,28,28.0,-3.0,0.629058837890625,21,10,7,62,1.0,False
+physical_robustness_8,HEU V3_F3_02: baseline vs sticky,HEU,V3_F3_02,high-friction material configuration,100,89,89.0,92,92.0,3.0,0.5078125,86,3,6,5,1.0,False
+physical_robustness_8,HEU V3_F3_02: baseline vs fl2000,HEU,V3_F3_02,force-limit 2000,100,89,89.0,89,89.0,0.0,1.0,87,2,2,9,1.0,False
+physical_robustness_8,HEU BumpyGround: baseline vs sticky,HEU,BumpyGround,high-friction material configuration,100,70,70.0,73,73.0,3.0,0.6476058959960938,62,8,11,19,1.0,False
+physical_robustness_8,HEU BumpyGround: baseline vs fl2000,HEU,BumpyGround,force-limit 2000,100,70,70.0,74,74.0,4.0,0.34375,67,3,7,23,1.0,False
+anti_stuck_2,RL BumpyGround: baseline vs BumpyGround_SCI200,RL,BumpyGround,BumpyGround_SCI200,100,31,31.0,40,40.0,9.0,0.0783538818359375,25,6,15,54,0.156707763671875,False
+anti_stuck_2,RL Complete: baseline vs Complete_MaxStuck10,RL,Complete,Complete_MaxStuck10,100,19,19.0,24,24.0,5.0,0.266845703125,15,4,9,72,0.266845703125,False

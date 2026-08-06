@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "paper_target": "Robotica",
+  "analysis_frozen_date": "2026-08-06",
+  "design": {
+    "evaluation_unit": "environmental scenario/seed evaluated with one frozen learned policy",
+    "pairing_key": "episodio",
+    "primary_family": "Six paired RL-versus-heuristic success comparisons: V3_F3_02, BigRock, HardTerrain, BumpyGround, Complete, DeepHoles",
+    "primary_complete_policy": "Use all 100 raw Complete pairs; do not apply outcome-dependent filtering",
+    "success_rate_ci": "Wilson 95% confidence interval",
+    "paired_difference_ci": "Paired BCa bootstrap 95% confidence interval, resampling complete episode pairs",
+    "paired_difference_bootstrap_resamples": 100000,
+    "paired_difference_bootstrap_seed": 20260806,
+    "success_test": "Exact two-sided McNemar/binomial test on discordant pairs",
+    "primary_multiplicity": "Holm correction over the six primary McNemar tests",
+    "continuous_subset": "Episodes where both RL and heuristic terminate SUCCESS",
+    "continuous_outcomes": [
+      "tiempo_s",
+      "energia_total"
+    ],
+    "continuous_outcome_labels": {
+      "tiempo_s": "time-to-success (s)",
+      "energia_total": "cumulative actuation-effort proxy"
+    },
+    "continuous_test": "Paired two-sided Wilcoxon signed-rank test",
+    "continuous_effect_size": "Matched-pairs rank-biserial correlation from signed ranks; positive means RL > heuristic",
+    "continuous_multiplicity": "Holm correction across the six terrains separately for each continuous outcome",
+    "failure_modes": "Descriptive only in the frozen analysis",
+    "physical_robustness_role": "Secondary/exploratory; Holm over eight intra-system baseline-versus-perturbation comparisons",
+    "anti_stuck_role": "Sensitivity/exploratory; Holm over the two anti-stuck comparisons",
+    "historical_complete_filter_role": "Sensitivity only; exclude a pair if either system has FALL with pasos <= 50"
+  },
+  "primary_datasets": {
+    "V3_F3_02": {
+      "rl": {
+        "path": "Data/raw/RL/HuskyAgent2_metricas_V3_F3_02.csv",
+        "sha256": "195858a2a8f7538e213cdcc5dbc03f82560ef6104f876a61b6cce15b9135ef9d",
+        "provenance_note": "Authoritative complete copy; results/EvaluationResults/RL counterpart is header-only."
+      },
+      "heuristic": {
+        "path": "Data/raw/Heuristic/HuskyHeuristic_metricas_V3_F3_02.csv",
+        "sha256": "9e47d677f58cf1a39c022625c6b93494ed6f3b8e89ff398d103861aa1ce5f813"
+      }
+    },
+    "BigRock": {
+      "rl": {"path": "Data/raw/RL/HuskyAgent2_metricas_BigRock.csv", "sha256": "8640623bf768a9f5adcf616649ee84fcbda9186d199b5c53f08e2986a36805c5"},
+      "heuristic": {"path": "Data/raw/Heuristic/HuskyHeuristic_metricas_BigRock.csv", "sha256": "4de8917e2db1bcf7f168cfc0786024b4248c087b2717bb4d384ae9627bcb55e7"}
+    },
+    "HardTerrain": {
+      "rl": {"path": "Data/raw/RL/HuskyAgent2_metricas_HardTerrain.csv", "sha256": "e7f9645630c7a61345f36ccc39e6689000674da9c3b1984097a2994e29e700f8"},
+      "heuristic": {"path": "Data/raw/Heuristic/HuskyHeuristic_metricas_HardTerrain.csv", "sha256": "009049903f61034440fab2d22f155fa3df740c04c2b4f865e8e9f628851b3e87"}
+    },
+    "BumpyGround": {
+      "rl": {"path": "Data/raw/RL/HuskyAgent2_metricas_BumpyGround.csv", "sha256": "79baec4f4a8b8adc599719fe00193fa94dffa944e4715f12ac4a07f09078bf09"},
+      "heuristic": {"path": "Data/raw/Heuristic/HuskyHeuristic_metricas_BumpyGround.csv", "sha256": "82e916e8723f79ed9588879f4ea36a5ee0af909fcf38a2dc6b474103d945be77"}
+    },
+    "Complete": {
+      "rl": {"path": "Data/raw/RL/HuskyAgent2_metricas_Complete.csv", "sha256": "feecaf6ce694207ecbc76233c845c277f12000175f248adc2aca81c24977de8b"},
+      "heuristic": {"path": "Data/raw/Heuristic/HuskyHeuristic_metricas_Complete.csv", "sha256": "db20ac4a630451422fe923bf5149ad3860d460965ebfc72a95cfa6acf2c29bc2"}
+    },
+    "DeepHoles": {
+      "rl": {"path": "Data/raw/RL/HuskyAgent2_metricas_DeepHoles.csv", "sha256": "aee2ebc6b529c4096f6e8b431f61f6723cbcdd8b131299c521b8f3b7363996a7"},
+      "heuristic": {"path": "Data/raw/Heuristic/HuskyHeuristic_metricas_DeepHoles.csv", "sha256": "3a930913bb41953f2c9bde01f7dd552fae2f84f95e8667828f21fb578b375620"}
+    }
+  },
+  "physical_robustness_datasets": {
+    "RL_V3_sticky": {"path": "Data/raw/RL/HuskyAgent2_metricas_TerrainSticky_V3_F3_02.csv", "sha256": "2dbced6526a3c13c0168aa1216d093c49dfd17ccc8e122ee689ff8d91153ad2d"},
+    "RL_V3_fl2000": {"path": "Data/raw/RL/HuskyAgent2_metricas_FL2000_V3_F3_02.csv", "sha256": "5cd90814322878480e0f1822f13025a076102a475822f647e0eb391d9669ab4f"},
+    "RL_BumpyGround_sticky": {"path": "Data/raw/RL/HuskyAgent2_metricas_TerrainSticky_BumpyGround.csv", "sha256": "548b37e164736e390f75a26ae880b69a90383238aa004a3300d0e1904e317e84"},
+    "RL_BumpyGround_fl2000": {"path": "Data/raw/RL/HuskyAgent2_metricas_FL2000_BumpyGround.csv", "sha256": "e797d948ae39f6ede3eac8e6cb051bca1aaebb46f681650f858e4ab9c6e69825"},
+    "HEU_V3_sticky": {"path": "Data/raw/Heuristic/HuskyHeuristic_metricas_TerrainSticky_V3_F3_02.csv", "sha256": "99c6b265e197b8734696994a12bf00af1ae8f77f04a508af0d256edae2274c46"},
+    "HEU_V3_fl2000": {"path": "Data/raw/Heuristic/HuskyHeuristic_metricas_FL2000_V3_F3_02.csv", "sha256": "e822f6d3d34fb0acf91cefa572cbb7a128f8cdf8a5520a3d195cc4f8d4cd8213"},
+    "HEU_BumpyGround_sticky": {"path": "Data/raw/Heuristic/HuskyHeuristic_metricas_TerrainSticky_BumpyGround.csv", "sha256": "df4aca9d42b7ebf23be69d0d88cec29fb9fad127efcd99800f99ed883d4c9241"},
+    "HEU_BumpyGround_fl2000": {"path": "Data/raw/Heuristic/HuskyHeuristic_metricas_FL2000_BumpyGround.csv", "sha256": "76063bcc11946f63cd015afa10d282236a2c5d473b5ded157f5d4140f9f6f1fc"}
+  },
+  "anti_stuck_datasets": {
+    "BumpyGround_SCI200": {"path": "Data/raw/RL/HuskyAgent2_metricas_BumpyGround_SCI200.csv", "sha256": "32e23f488d67c45766132bf35aedba066144541ab9cc8da3e88ab9ab0df07887", "baseline_terrain": "BumpyGround"},
+    "Complete_MaxStuck10": {"path": "Data/raw/RL/HuskyAgent2_metricas_Complete_MaxStuck10.csv", "sha256": "7a9bfa2c9ec1202d9c82ddc3d0e54591830129cbadfca530b0b0d2b54ea3c226", "baseline_terrain": "Complete"}
+  },
+  "seed_provenance": {
+    "source_path": "UnityProject/Assets/Scenes/EvaluationRL.unity",
+    "source_sha256": "e1f40edb90fffc63219a196e3690e197d66f7f3b13ba945ebe53769b62932c18",
+    "corroborating_sources": [
+      {
+        "path": "UnityProject/Assets/Scenes/SampleScene.unity",
+        "sha256": "d9f0eaf4d82f2f654dbf1f7e2c2dc62875a54070a3ac8b88f365548c97b4b1a8",
+        "note": "Contains two complete serialized 100-seed lists verified during the audit as identical element by element."
+      }
+    ],
+    "note": "EvaluationRL.unity preserves one complete serialized 100-seed list. SampleScene.unity corroborates it with two identical serialized lists. CSVs identify episodio, not seed; this mapping makes the pairing explicit.",
+    "episode_seeds": [66747, 70160, 774765, 511139, 797490, 827308, 165959, 736130, 260217, 506005, 230274, 387141, 215981, 20811, 134834, 740831, 195091, 887039, 861100, 358865, 103703, 529583, 358755, 707505, 580475, 620548, 732496, 747882, 396251, 245257, 686345, 210546, 517538, 485391, 252806, 770779, 2579, 483912, 447958, 486460, 711577, 451248, 269953, 283041, 635241, 294779, 369534, 852680, 175666, 852200, 644354, 615833, 441521, 496697, 30104, 537164, 711404, 67260, 930664, 176943, 94812, 418076, 339880, 14960, 819659, 19728, 869602, 730589, 768005, 364055, 738253, 711179, 439082, 374640, 647288, 652454, 259631, 75715, 72265, 285696, 251015, 879816, 572217, 544050, 600903, 70512, 769025, 20841, 455287, 715641, 59375, 935319, 553248, 271016, 391649, 293502, 111369, 254993, 463381, 615514]
+  },
+  "explicit_exclusions": [
+    "historical results/EvaluationResults/RL/HuskyAgent2_metricas_V3_F3_02.csv (header-only; superseded by the complete audited copy now published in Data/raw/RL)",
+    "HuskyAgent2_metricas_pruebaVideo1.csv (7-episode demonstration)",
+    "HuskyHeuristic_metricas_pruebaVideo1.csv (empty)",
+    "HuskyAgent2_metricas_TerrainSticky_BumpyGround_FL2000.csv (empty)"
+  ]
+}
