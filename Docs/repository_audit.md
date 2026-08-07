@@ -55,4 +55,4 @@ The archived `packages-lock.json` is not published because it encoded the two st
 - Original TerraRover-Gen source code: MIT License.
 - Project-owned data, documentation, figures, frozen-model artifacts, and other non-software research materials: CC BY 4.0.
 - Clearpath Husky description assets: original BSD 3-Clause terms retained; see `THIRD_PARTY_NOTICES.md`.
-- Remaining step: after the paper release is frozen, archive that release in Zenodo and insert the resulting DOI into the manuscript Data Availability Statement and citation metadata.
+- Paper reproducibility release `v1.0.0-paper` archived in Zenodo: https://doi.org/10.5281/zenodo.21830588.
