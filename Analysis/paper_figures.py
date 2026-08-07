@@ -19,10 +19,9 @@ from PIL import Image
 
 
 ROOT = Path(__file__).resolve().parent
-REPO_ROOT = ROOT.parent
-INPUT = REPO_ROOT / "Results" / "tables"
-OUT = REPO_ROOT / "Results" / "figures"
-OUT.mkdir(parents=True, exist_ok=True)
+INPUT = ROOT / "frozen_inputs"
+OUT = ROOT / "paper_figures"
+OUT.mkdir(exist_ok=True)
 
 TERRAIN_ORDER = [
     "V3_F3_02",
@@ -169,10 +168,9 @@ def failure_modes_plot() -> None:
 
 def main() -> None:
     _style()
+    terrain_montage()
     primary_effect_plot()
     failure_modes_plot()
-    print("Regenerated quantitative paper figures 2 and 3.")
-    print("Figure 1 is retained as an archived terrain montage in Results/figures/.")
 
 
 if __name__ == "__main__":
