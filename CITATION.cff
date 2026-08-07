@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use this reproducibility package, please cite the associated TerraRover-Gen article."
 title: "TerraRover-Gen: reproducibility package for zero-shot terrain-family generalization of rover navigation"
 version: "1.0.0-paper"
+doi: "10.5281/zenodo.21830588"
 type: software
 repository-code: "https://github.com/aserrano77/TerraRover-Gen"
 authors:
@@ -9,7 +10,7 @@ authors:
     family-names: "Parreño Rodríguez"
     affiliation: "Universidad Católica San Antonio de Murcia (UCAM)"
   - given-names: Antonio
-    family-names: "Serrano Fernández"
+    family-names: "Serrano"
     email: aserrano7@ucam.edu
     affiliation: "Universidad Católica San Antonio de Murcia (UCAM)"
 keywords:
