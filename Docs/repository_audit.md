@@ -4,7 +4,7 @@ Audit date: 2026-08-07
 
 ## Source archive
 
-The public candidate was derived from the archived `TerraRover_Sim-master.zip` development snapshot together with the frozen paper-analysis artifacts produced on 2026-08-06.
+The repository snapshot was derived from the archived `TerraRover_Sim-master.zip` development snapshot together with the frozen paper-analysis artifacts produced on 2026-08-06.
 
 The source archive contained approximately 421 MB of uncompressed `Assets` content and 372 MB of uncompressed training/result history. Most of that material is not required to inspect or reproduce the paper's evaluation claims.
 
@@ -34,7 +34,7 @@ The source archive contained approximately 421 MB of uncompressed `Assets` conte
 
 ## Dependency normalization
 
-The archived Unity package manifest referenced ML-Agents and URDF Importer through absolute paths on the development computer. The candidate replaces those paths with:
+The archived Unity package manifest referenced ML-Agents and URDF Importer through absolute paths on the development computer. The repository replaces those paths with:
 
 - `com.unity.ml-agents`: `4.0.1`;
 - `com.unity.robotics.urdf-importer`: official Git URL pinned to `v0.5.2`.
@@ -49,8 +49,10 @@ The archived `packages-lock.json` is not published because it encoded the two st
 - Regenerated PNG Figures 2 and 3 were byte-identical to the figures used in the manuscript candidate.
 - No API keys, access tokens, private keys, or non-empty password fields were detected by the final text-pattern scan.
 
-## Pre-release decisions still required
+## Publication status
 
-1. Select a license for original TerraRover-Gen code and data/documentation.
-2. Create/identify the target GitHub repository.
-3. After the GitHub release is frozen, archive that release in Zenodo and insert its DOI into the manuscript Data Availability Statement.
+- GitHub repository: `https://github.com/aserrano77/TerraRover-Gen`.
+- Original TerraRover-Gen source code: MIT License.
+- Project-owned data, documentation, figures, frozen-model artifacts, and other non-software research materials: CC BY 4.0.
+- Clearpath Husky description assets: original BSD 3-Clause terms retained; see `THIRD_PARTY_NOTICES.md`.
+- Remaining step: after the paper release is frozen, archive that release in Zenodo and insert the resulting DOI into the manuscript Data Availability Statement and citation metadata.

@@ -3,11 +3,13 @@ message: "If you use this reproducibility package, please cite the associated Te
 title: "TerraRover-Gen: reproducibility package for zero-shot terrain-family generalization of rover navigation"
 version: "1.0.0-paper"
 type: software
+repository-code: "https://github.com/aserrano77/TerraRover-Gen"
 authors:
   - given-names: Carolina
-    family-names: Parreño-Rodríguez
+    family-names: "Parreño Rodríguez"
+    affiliation: "Universidad Católica San Antonio de Murcia (UCAM)"
   - given-names: Antonio
-    family-names: Serrano-Fernández
+    family-names: "Serrano Fernández"
     email: aserrano7@ucam.edu
     affiliation: "Universidad Católica San Antonio de Murcia (UCAM)"
 keywords:

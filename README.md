@@ -55,9 +55,11 @@ See `Docs/reproducibility.md` for the experimental provenance boundary and known
 
 ## Authors
 
-- Carolina Parreño-Rodríguez
-- Antonio Serrano-Fernández (corresponding author, aserrano7@ucam.edu)
+- Carolina Parreño Rodríguez
+- Antonio Serrano Fernández (corresponding author, aserrano7@ucam.edu)
 
 ## License
 
-The project-owned code/data license is intentionally left unset in this pre-release candidate pending author confirmation. Third-party notices are documented in `THIRD_PARTY_NOTICES.md`.
+Original TerraRover-Gen source code is released under the MIT License. Project-owned data, documentation, figures, frozen-model artifacts, and other non-software research materials are released under the Creative Commons Attribution 4.0 International (CC BY 4.0) license. Third-party material remains under its original license; in particular, the Clearpath Husky description assets retain their BSD 3-Clause terms.
+
+See `LICENSE.md` for the scope of each license and `THIRD_PARTY_NOTICES.md` for third-party attribution.
