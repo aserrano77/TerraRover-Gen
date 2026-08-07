@@ -2,6 +2,8 @@
 
 Reproducibility package for the manuscript **“TerraRover-Gen: A Controlled Study of Zero-Shot Terrain-Family Generalization for Rover Navigation.”**
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21830588.svg)](https://doi.org/10.5281/zenodo.21830588)
+
 The repository characterizes one frozen PPO rover-navigation policy under controlled terrain-family shifts. It is an evaluation package, not a claim of a new reinforcement-learning algorithm or a universal rover benchmark.
 
 ## What is included
@@ -56,7 +58,7 @@ See `Docs/reproducibility.md` for the experimental provenance boundary and known
 ## Authors
 
 - Carolina Parreño Rodríguez
-- Antonio Serrano Fernández (corresponding author, aserrano7@ucam.edu)
+- Antonio Serrano (corresponding author, aserrano7@ucam.edu)
 
 ## License
 
