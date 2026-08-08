@@ -2,13 +2,11 @@
 
 Reproducibility package for the manuscript **“TerraRover-Gen: A Controlled Study of Zero-Shot Terrain-Family Generalization for Rover Navigation.”**
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21830588.svg)](https://doi.org/10.5281/zenodo.21830588)
-
 The repository characterizes one frozen PPO rover-navigation policy under controlled terrain-family shifts. It is an evaluation package, not a claim of a new reinforcement-learning algorithm or a universal rover benchmark.
 
 ## What is included
 
-- `UnityProject/` — cleaned Unity 6000.3.6f1 project snapshot containing the current evaluation/training scenes, terrain families, rover assets, controllers, and project settings.
+- `UnityProject/` — cleaned Unity 6000.3.6f1 project snapshot from the evaluation stage, containing the experimental scenes, terrain families, rover assets, controllers, and project settings.
 - `Models/HuskyV3_F3_02/` — frozen PPO policy used in the paper plus archived trainer configuration and provenance metadata.
 - `Data/raw/` — the exact episode-level CSV inputs used by the frozen statistical pipeline.
 - `Data/episode_seed_mapping.csv` — explicit episode-to-seed mapping for the 100 paired scenarios.
@@ -55,10 +53,18 @@ The original project snapshot referenced ML-Agents and URDF Importer through abs
 
 See `Docs/reproducibility.md` for the experimental provenance boundary and known archival limitations.
 
+## Training and evaluation provenance
+
+The archived `HuskyV3_F3_02` ONNX model is the frozen policy evaluated in the study and is byte-identical to the final model produced by the reported training run. The Unity project included in this repository corresponds to the subsequent evaluation stage and is not intended to be a byte-for-byte reconstruction of the Unity project state from which the final policy was trained.
+
+Accordingly, serialized reward-related fields in the evaluation snapshot should not be used to reconstruct the training reward configuration. In particular, the preserved `Environment.prefab` contains later serialized values for some reward fields (including `wEstabilidad=0.01` and `wProximidad=0.4`), whereas the archived training provenance for `HuskyV3_F3_02` supports the reward configuration reported in the manuscript (`wEstabilidad=0.05`, with no active proximity-shaping term in the final training reward).
+
+These differences do not affect the reported evaluation results. Evaluation used the frozen ONNX policy without learning or parameter updates; reward-function fields in the Unity evaluation environment therefore did not determine the actions produced by the policy. The manuscript reports training parameters from the training provenance and evaluation parameters from the preserved evaluation configuration.
+
 ## Authors
 
 - Carolina Parreño Rodríguez
-- Antonio Serrano (corresponding author, aserrano7@ucam.edu)
+- Antonio Serrano (corresponding author, [aserrano7@ucam.edu](mailto:aserrano7@ucam.edu))
 
 ## License
 
